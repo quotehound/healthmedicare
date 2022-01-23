@@ -10,34 +10,109 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />   
     <title>React App</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+ var requestOptions = {
+        async: true,
+        crossDomain: true,
+        method: 'GET',
+        redirect: 'follow',
+        url:'https://geolocation-db.com/json/8dd79c70-0801-11ec-a29f-e381a788c2c0'
+      };
+
+      $.ajax(requestOptions).done(function(response){
+        console.log(response);
+
+        var parse = JSON.parse(response);
+
+
+        let zip = parse.postal;
+        let city = parse.city;
+        let state = parse.state;
+
+        localStorage.setItem('zip', zip);
+
+        localStorage.setItem('city', city);
+        localStorage.setItem('state', state);
+
+        document.getElementById('zipCode').value = zip;
+        document.getElementById('zip').value = zip;
+        document.getElementById('city').value = city;
+        document.getElementById('state').value = state;
+      })
+
+    </script>	
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <script id="LeadiDscript" type="text/javascript">
+    (function() {
+    var s = document.createElement('script');
+    s.id = 'LeadiDscript_campaign';
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//create.lidstatic.com/campaign/fc073415-42cd-7022-a6e6-8a8722d040f9.js?snippet_version=2';
+    var LeadiDscript = document.getElementById('LeadiDscript');
+    LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+    })();
+    </script>
+    <noscript><img src='//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=fc073415-42cd-7022-a6e6-8a8722d040f9&snippet_version=2' /></noscript>
+      
+        <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
+    
+        <input type="hidden" id="tele" name="tele"/>
+    
+        <input type='hidden' name="zip" id='zipCode' />
+        <input type='hidden' name="city" id='city' />
+        <input type='hidden' name="state" id='state' />
+    
+    
+        <input type="hidden" id="lp" name="lp" /> 
+        <input type="hidden" id="url" name='url' />
+    
+        <!-- Google ads terms -->
+        <input type='hidden' id='gclid' name='gclid' />
+        <input type='hidden' id='medium' name='medium' />
+        <input type='hidden' id='campaign' name='campaign' />
+        <input type='hidden' id='source' name='source' />
+        <input type='hidden' id='keyword' name='keyword' />
+        
+    
+        <script> 
+          const urlSearch = window.location.search;
+    
+          const urlParams = new URLSearchParams(urlSearch);
+    
+          const lp = urlParams.get('lp_request_id');
+          const gclid = urlParams.get('gclid');
+    
+          const medium = urlParams.get('utm_medium');
+          const campaign = urlParams.get('utm_campaign');
+          const source = urlParams.get('utm_source');
+          const kw = urlParams.get('keyword');
+    
+    
+          
+    
+    
+          document.getElementById('lp').value = lp;
+          document.getElementById('gclid').value = gclid;
+          document.getElementById('medium').value = medium;
+          document.getElementById('campaign').value = campaign;
+          document.getElementById('source').value = source;
+          document.getElementById('keyword').value = kw;
+          </script> 
+    
+    
+    
   </body>
 </html>
