@@ -217,7 +217,7 @@ class App extends Component {
             </Route>
 
             <Route path='/coverage-time' exact>
-              <CoverageTime
+              <HealthCoverageTime
                 setCoverTime={(v) => {
                   this.setState({
                     healthPostData: {
@@ -230,7 +230,7 @@ class App extends Component {
             </Route>
 
             <Route path='/income' exact>
-              <Income
+              <HealthIncome
 
                 setIncome={(v) => {
                   this.setState({
@@ -244,7 +244,7 @@ class App extends Component {
             </Route>
 
             <Route path='/gender' exact>
-              <Gender
+              <HealthGender
                 setGender={(v) => {
                   this.setState({
                     healthPostData: {
@@ -257,7 +257,7 @@ class App extends Component {
             </Route>
 
             <Route path='/month' exact>
-              <Month
+              <HealthMonth
                 setMonth={(v) => {
                   this.setState({
                     healthPostData: {
@@ -271,7 +271,7 @@ class App extends Component {
 
             <Route path='/day' exact>
 
-              <Day
+              <HealthDay
                 setDate={(v) => {
                   this.setState({
                     healthPostData: {
@@ -286,7 +286,7 @@ class App extends Component {
 
             <Route path='/year' exact>
 
-              <Year
+              <HealthYear
                 setDOB={(v) => {
                   this.setState({
                     healthPostData: {
@@ -299,7 +299,7 @@ class App extends Component {
             </Route>
 
             <Route path='/preexist' exact >
-              <PreExist
+              <HealthPreExist
                 setTabacco={(v) => {
                   this.setState({
                     healthPostData: {
@@ -313,7 +313,7 @@ class App extends Component {
             </Route>
 
             <Route path='/household' exact>
-              <Household 
+              <HealthHousehold 
                 setSpouse={(v) => {
                   this.setState({
                     healthPostData: {
@@ -328,7 +328,7 @@ class App extends Component {
 
             <Route path='/height-weight' exact>
 
-              <HeightWeight
+              <HealthHeightWeight
                 setWeight={(v) => {
                   this.setState({
                     healthPostData: {
@@ -360,7 +360,7 @@ class App extends Component {
             </Route>
 
             <Route path='/address' exact>
-              <Address
+              <HealthAddress
 
                 setAddress={(v) => {
                   this.setState({
@@ -374,7 +374,7 @@ class App extends Component {
             </Route>
 
             <Route path="/name" exact>
-              <Name
+              <HealthName
                 setFName={(v) => {
                   this.setState({
                     healthPostData: {
@@ -398,7 +398,7 @@ class App extends Component {
             </Route>
 
             <Route path='/email-phone' exact>
-              <EmailPhone
+              <HealthEmailPhone
                  email_address={this.state.healthPostData.email_address}
                  phone_home={this.state.healthPostData.phone_home}
  
@@ -438,7 +438,7 @@ class App extends Component {
            
             
             <Route path='/thank-you' exact>
-              <ThankYou
+              <HealthThankYou
 
                 postData2={this.state.healthPostData}
     
