@@ -119,13 +119,13 @@ class LandingPage extends Component {
     this.props.setZipCode(zipValue);
 
     console.log('updated props with value: ', zipValue);
-    this.props.history.push('/business-name' + '?lp_request_id=' + lp + '&gclid=' + gclid + '&zip_code=' +  zipValue);
+    this.props.history.push('/age' + '?lp_request_id=' + lp + '&gclid=' + gclid + '&zip_code=' +  zipValue);
 
       }
   
     
       autoFocusClick() {
-        document.getElementById('zipCode').focus();
+        document.getElementById('zip').focus();
       }
 
 
@@ -134,6 +134,7 @@ class LandingPage extends Component {
 
     const zippy = localStorage.getItem('zip');
     const state = localStorage.getItem('state');
+    const city = localStorage.getItem('city');
         return (
             <div>
                 {/* End of header with Form */}
@@ -155,7 +156,7 @@ class LandingPage extends Component {
   <div className="relative z-10 container px-4 mx-auto">
     <div className="max-w-4xl pt-20">
       
-      <h2 className="mt-8 mb-8 text-5xl lg:text-7xl text-white font-bold" data-config-id="header">Get a free Trucking Insurance Quote</h2>
+                  <h2 className="mt-8 mb-8 text-5xl lg:text-7xl text-white font-bold" data-config-id="header">Get a free Medicare & Health Insurance Quote in {city}</h2>
       <form onSubmit={this.nextStep} >
 
                     <div className="flex justify items-center formSection py-10">
