@@ -8,6 +8,8 @@ import { withRouter } from 'react-router';
 import './forms.css';
 import Footer from '../Footer.jsx'
 import HealthHeader from './HealthHeader'
+import HealthCareNavBar from './HealthCareNavBar'
+
 
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -119,6 +121,7 @@ class HeightWeight extends Component {
     return (
 
       <div className="back bg-white">
+        <HealthCareNavBar />
         <HealthHeader />
         <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
           <div className="px-4 py-8 sm:px-10">

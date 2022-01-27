@@ -3,6 +3,8 @@ import {withRouter} from 'react-router';
 
 import './forms.css';
 import MedicareHeader from './MedicareHeader';
+import MedicareNavBar from './MedicareNavBar';
+
 
 
 
@@ -31,7 +33,8 @@ class Enrolled extends Component {
 
     render() {
         return (
-            <div className="back bg-white"> 
+          <div className="back bg-white"> 
+            <MedicareNavBar />
        <MedicareHeader />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
       <div className="px-4 py-8 sm:px-10">

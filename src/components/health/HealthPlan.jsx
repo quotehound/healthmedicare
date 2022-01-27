@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import '../../forms.css';
 import HealthHeader from './HealthHeader'
 
+import HealthCareNavBar from './HealthCareNavBar'
 
 
 
@@ -33,7 +34,8 @@ class HealthPlan extends Component {
 
     render() {
         return (
-            <div className="back bg-white"> 
+          <div className="back bg-white"> 
+            <HealthCareNavBar />
        <HealthHeader />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
       <div className="px-4 py-8 sm:px-10">

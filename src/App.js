@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 
 
-import NavBar from './Navbar';
 import LandingPage from './LandingPage';
 import Age from './Age';
 
@@ -147,7 +146,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <NavBar />
           <Switch>
 
             {/* Landing Page */}

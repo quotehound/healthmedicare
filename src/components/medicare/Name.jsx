@@ -4,6 +4,8 @@ import { withRouter } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import MedicareHeader from './MedicareHeader';
+import MedicareNavBar from './MedicareNavBar';
+
 
 // import Footer from '../Footer';
 import './forms.css';
@@ -114,6 +116,7 @@ const address = urlParams.get('address')
     render() {
         return (
             <div>
+                <MedicareNavBar />
                 <div className="back bg-white">
                    <MedicareHeader />
                     <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">

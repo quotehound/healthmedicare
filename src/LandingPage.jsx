@@ -6,6 +6,8 @@ import './LandingPage.css';
 import { ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css';
 
+import NavBar from './Navbar'
+
 
 
 import $ from 'jquery'; 
@@ -137,7 +139,8 @@ class LandingPage extends Component {
     const city = localStorage.getItem('city');
         return (
             <div>
-                {/* End of header with Form */}
+            {/* End of header with Form */}
+            <NavBar />
 
 {/* Start Of how it works */}
 <section className="relative pb-10 overflow-hidden backdrop">

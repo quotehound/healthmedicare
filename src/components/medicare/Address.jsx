@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router';
 import './forms.css';
 // import Footer from '../Footer.jsx'
+import MedicareNavBar from './MedicareNavBar';
 
 import MedicareHeader from './MedicareHeader';
 import { ToastContainer, toast } from 'react-toastify';
@@ -61,6 +62,7 @@ const year = urlParams.get('year');
     render() {
         return (
             <div>
+                <MedicareNavBar />
                    <div className="back bg-white">
                 <MedicareHeader />
                 <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">

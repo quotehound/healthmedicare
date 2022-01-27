@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router';
 import './forms.css';
 import HealthHeader from './HealthHeader'
+import HealthCareNavBar from './HealthCareNavBar'
 
 import Footer from '../Footer.jsx'
 import Axios from 'axios';
@@ -176,6 +177,7 @@ class EmailPhone extends Component {
 
         return (
             <div>
+                <HealthCareNavBar />
                 <div className="back bg-white">
                     <HealthHeader />
                     <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">

@@ -4,6 +4,7 @@ import HealthConnectMe from './HealthConnectMe';
 import HealthMA from './HealthMA'
 import HealthHeader from './HealthHeader';
 import Confetti from './HealthConfetti'
+import HealthCareNavBar from './HealthCareNavBar'
 
 import './forms.css';
 class ThankYou extends Component {
@@ -25,7 +26,7 @@ class ThankYou extends Component {
           
             <div>
 
-            
+            <HealthCareNavBar />
             <HealthHeader />
             <Confetti />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 maDiv content-center">
@@ -51,7 +52,7 @@ class ThankYou extends Component {
 
 
           </div>
-          <HealthConnectMe moduleId="1586" phoneNumber={tele}  />
+          <HealthConnectMe moduleId="1712" phoneNumber={tele}  />
 
           </div>
   

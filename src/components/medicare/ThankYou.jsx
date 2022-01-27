@@ -5,6 +5,8 @@ import MedicareMA from './MedicareMA';
 import MedicareHeader from './MedicareHeader';
 import Confetti from './ReactConfeetti'
 import './forms.css';
+import MedicareNavBar from './MedicareNavBar';
+
 class ThankYou extends Component {
     render() {
 
@@ -23,6 +25,7 @@ class ThankYou extends Component {
 
           
           <div>
+            <MedicareNavBar />
             <Confetti
           
             />
@@ -51,7 +54,7 @@ class ThankYou extends Component {
 
 
           </div>
-          <MedicareConnectMe moduleId="1658" phoneNumber={tele}  />
+          <MedicareConnectMe moduleId="1711" phoneNumber={tele}  />
 
           </div>
   
