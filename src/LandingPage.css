@@ -1,6 +1,6 @@
 .backdrop {
 
-  background-image: url('./Assets/header.png');
+  background-image: url('./Assets/background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -89,7 +89,7 @@ a {
 }
 
 .formBack{
-   background-image: url('./Assets/header.png');
+   background-image: url('./Assets/background.png');
    background-repeat: no-repeat;
    background-position: top;
    background-size: contain;
