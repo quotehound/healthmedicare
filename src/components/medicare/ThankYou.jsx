@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import MedicareConnectMe from './MedicareConnectMe';
 import MedicareMA from './MedicareMA';
 import MedicareHeader from './MedicareHeader';
-
+import Confetti from './ReactConfeetti'
 import './forms.css';
 class ThankYou extends Component {
     render() {
@@ -22,7 +22,10 @@ class ThankYou extends Component {
         return (
 
           
-            <div>
+          <div>
+            <Confetti
+          
+            />
 
                 <MedicareHeader />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 maDiv content-center">
@@ -44,7 +47,7 @@ class ThankYou extends Component {
 
         <MedicareMA />
 
-          </div>. 
+          </div>
 
 
           </div>

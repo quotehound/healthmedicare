@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import HealthConnectMe from './HealthConnectMe';
 import HealthMA from './HealthMA'
-import HealthHeader from './HealthHeader'
+import HealthHeader from './HealthHeader';
+import Confetti from './HealthConfetti'
 
 import './forms.css';
 class ThankYou extends Component {
@@ -24,7 +25,9 @@ class ThankYou extends Component {
           
             <div>
 
-                <HealthHeader />
+            
+            <HealthHeader />
+            <Confetti />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 maDiv content-center">
       <div className="px-4 py-8 sm:px-10">
 
