@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
 import './forms.css';
+import HealthHeader from './HealthHeader'
 
 import Footer from '../Footer.jsx'
 
@@ -25,16 +26,14 @@ class HealthCoverageTime extends Component {
         const lp = urlParams.get('lp_request_id')
         const plan = urlParams.get('plan');
 
-        this.props.history.push('/income' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&health_insurance_plan=ACA_Plan' + '&coverage_time=' + cover);
+        this.props.history.push('/health/income' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&health_insurance_plan=ACA_Plan' + '&coverage_time=' + cover);
     }
 
 
     render() {
         return (
             <div className="back bg-white"> 
-       <div className="bg-blue-500 headerText justify-center align-middle text-center">
-                    <h2>Get Your Free Health Insurance Quote</h2>
-                </div>
+       <HealthHeader />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
       <div className="px-4 py-8 sm:px-10">
 

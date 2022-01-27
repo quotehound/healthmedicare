@@ -3,6 +3,8 @@ import { withRouter } from 'react-router';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import HealthHeader from './HealthHeader'
+
 
 
 import './forms.css';
@@ -48,7 +50,7 @@ class Name extends Component {
         console.log('first name is: ' + firstName + ' last name is: ' + lastName);
 
      
-    this.props.history.push('/email-phone' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&health_insurance_plan=ACA_Plan' + '&coverage_time=' + time + '&household_income=' + income + '&gender=' + gender + '&pre_existing_conditions=' + pre + '&household_size=' + people + '&weight=' + weight + '&height=' + height + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName);
+    this.props.history.push('/health/email-phone' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&health_insurance_plan=ACA_Plan' + '&coverage_time=' + time + '&household_income=' + income + '&gender=' + gender + '&pre_existing_conditions=' + pre + '&household_size=' + people + '&weight=' + weight + '&height=' + height + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName);
 
 
     }
@@ -92,9 +94,7 @@ unhide(){
         return (
             <div>
                 <div className="back bg-white">
-                    <div className="bg-blue-500 headerText justify-center align-middle text-center">
-                        <h2>Get Your Free Health Insurance Quote</h2>
-                    </div>
+                    <HealthHeader />
                     <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
                         <div className="px-4 py-8 sm:px-10">
 

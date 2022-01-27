@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-//import ConnectStreams from '../ConnectMe';
-//import MA from '../MA';
+import HealthConnectMe from './HealthConnectMe';
+import MA from './HealthMA'
+import HealthHeader from './HealthHeader'
 
 import './forms.css';
 class ThankYou extends Component {
@@ -23,9 +24,7 @@ class ThankYou extends Component {
           
             <div>
 
-                <div className="bg-blue-500 headerText justify-center align-middle text-center h-screen">
-                    <h2>Get Your Free Health Insurance Quote</h2>
-                </div>
+                <HealthHeader />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 maDiv content-center">
       <div className="px-4 py-8 sm:px-10">
 
@@ -43,13 +42,13 @@ class ThankYou extends Component {
           </div>
 
 
-          {/* <MA /> */}
+          <MA />
 
           </div>. 
 
 
           </div>
-          {/* <ConnectStreams moduleId="1586" phoneNumber={tele}  /> */}
+          <HealthConnectMe moduleId="1586" phoneNumber={tele}  />
 
           </div>
   

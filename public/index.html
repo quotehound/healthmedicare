@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script src="//insurance.mediaalpha.com/js/serve.js"></script>
+
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -10,109 +12,164 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />   
-    <title>React App</title>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Get A Free Quote</title>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-
- var requestOptions = {
+      var requestOptions = {
         async: true,
         crossDomain: true,
-        method: 'GET',
-        redirect: 'follow',
-        url:'https://geolocation-db.com/json/8dd79c70-0801-11ec-a29f-e381a788c2c0'
+        method: "GET",
+        redirect: "follow",
+        url: "https://geolocation-db.com/json/8dd79c70-0801-11ec-a29f-e381a788c2c0",
       };
 
-      $.ajax(requestOptions).done(function(response){
+      $.ajax(requestOptions).done(function (response) {
         console.log(response);
 
         var parse = JSON.parse(response);
-
 
         let zip = parse.postal;
         let city = parse.city;
         let state = parse.state;
 
-        localStorage.setItem('zip', zip);
+        localStorage.setItem("zip", zip);
 
-        localStorage.setItem('city', city);
-        localStorage.setItem('state', state);
+        localStorage.setItem("city", city);
+        localStorage.setItem("state", state);
 
-        document.getElementById('zipCode').value = zip;
-        document.getElementById('zip').value = zip;
-        document.getElementById('city').value = city;
-        document.getElementById('state').value = state;
-      })
+        document.getElementById("zipCode").value = zip;
+        document.getElementById("zip").value = zip;
+        document.getElementById("city").value = city;
+        document.getElementById("state").value = state;
+      });
+    </script>
+<!-- 
+<script type="text/javascript">
+  /* QuoteHound / Life TY - Premium */
 
-    </script>	
 
+  console.log('started script for MA')
+  var MediaAlphaExchange = {
+     "data": {
+      "zip": localStorage.getItem('zip')
+     },
+"placement_id": "O_lLlIDgDp7Wt1W0Z2IzmjkLjux5FA",
+
+     "sub_1": "test sub id",
+     "type": "ad_unit",
+     "version": 17
+  };
+
+  console.log("loaded all vars")
+  MediaAlphaExchange__load('mediaalpha_placeholder');
+
+  console.log('end of script')
+  </script> -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N4DZJ49");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script? async src="https://www.googletagmanager.com/gtag/js?id=G-78V5PDREWQ"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  
+  
+  gtag('config', 'G-78V5PDREWQ');
+  </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N4DZJ49"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
     <div id="root"></div>
 
-
-  <script id="LeadiDscript" type="text/javascript">
-    (function() {
-    var s = document.createElement('script');
-    s.id = 'LeadiDscript_campaign';
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = '//create.lidstatic.com/campaign/fc073415-42cd-7022-a6e6-8a8722d040f9.js?snippet_version=2';
-    var LeadiDscript = document.getElementById('LeadiDscript');
-    LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-    })();
+    <script id="LeadiDscript" type="text/javascript">
+      (function () {
+        var s = document.createElement("script");
+        s.id = "LeadiDscript_campaign";
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          "//create.lidstatic.com/campaign/fc073415-42cd-7022-a6e6-8a8722d040f9.js?snippet_version=2";
+        var LeadiDscript = document.getElementById("LeadiDscript");
+        LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+      })();
     </script>
-    <noscript><img src='//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=fc073415-42cd-7022-a6e6-8a8722d040f9&snippet_version=2' /></noscript>
-      
-        <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
-    
-        <input type="hidden" id="tele" name="tele"/>
-    
-        <input type='hidden' name="zip" id='zipCode'/>
-        <input type='hidden' name="city" id='city' />
-        <input type='hidden' name="state" id='state' />
-    
-    
-        <input type="hidden" id="lp" name="lp" /> 
-        <input type="hidden" id="url" name='url' />
-    
-        <!-- Google ads terms -->
-        <input type='hidden' id='gclid' name='gclid' />
-        <input type='hidden' id='medium' name='medium' />
-        <input type='hidden' id='campaign' name='campaign' />
-        <input type='hidden' id='source' name='source' />
-        <input type='hidden' id='keyword' name='keyword' />
-        
-    
-        <script> 
-          const urlSearch = window.location.search;
-    
-          const urlParams = new URLSearchParams(urlSearch);
-    
-          const lp = urlParams.get('lp_request_id');
-          const gclid = urlParams.get('gclid');
-    
-          const medium = urlParams.get('utm_medium');
-          const campaign = urlParams.get('utm_campaign');
-          const source = urlParams.get('utm_source');
-          const kw = urlParams.get('keyword');
-    
-    
-          
-    
-    
-          document.getElementById('lp').value = lp;
-          document.getElementById('gclid').value = gclid;
-          document.getElementById('medium').value = medium;
-          document.getElementById('campaign').value = campaign;
-          document.getElementById('source').value = source;
-          document.getElementById('keyword').value = kw;
-          </script> 
-    
-    
-    
+    <noscript
+      ><img
+        src="//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=fc073415-42cd-7022-a6e6-8a8722d040f9&snippet_version=2"
+    /></noscript>
+
+    <input id="leadid_token" name="universal_leadid" type="hidden" value="" />
+
+    <input type="hidden" id="tele" name="tele" />
+
+    <input type="hidden" name="zip" id="zipCode" />
+    <input type="hidden" name="city" id="city" />
+    <input type="hidden" name="state" id="state" />
+
+    <input type="hidden" id="lp" name="lp" />
+    <input type="hidden" id="url" name="url" />
+
+    <!-- Google ads terms -->
+    <input type="hidden" id="gclid" name="gclid" />
+    <input type="hidden" id="medium" name="medium" />
+    <input type="hidden" id="campaign" name="campaign" />
+    <input type="hidden" id="source" name="source" />
+    <input type="hidden" id="keyword" name="keyword" />
+
+    <script>
+      const urlSearch = window.location.search;
+
+      const urlParams = new URLSearchParams(urlSearch);
+
+      const lp = urlParams.get("lp_request_id");
+      const gclid = urlParams.get("gclid");
+
+      const medium = urlParams.get("utm_medium");
+      const campaign = urlParams.get("utm_campaign");
+      const source = urlParams.get("utm_source");
+      const kw = urlParams.get("keyword");
+
+      document.getElementById("lp").value = lp;
+      document.getElementById("gclid").value = gclid;
+      document.getElementById("medium").value = medium;
+      document.getElementById("campaign").value = campaign;
+      document.getElementById("source").value = source;
+      document.getElementById("keyword").value = kw;
+    </script>
   </body>
 </html>

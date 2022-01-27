@@ -12,7 +12,7 @@ import HealthPlan from './components/health/HealthPlan';
 import Enroll from './components/medicare/Enroll';
 import Gender from './components/medicare/Gender';
 import Month from './components/medicare/Month';
-import Day from  './components/medicare/Day';
+import Day from './components/medicare/Day';
 import Year from './components/medicare/Year';
 import Address from './components/medicare/Address';
 import Name from './components/medicare/Name';
@@ -39,52 +39,47 @@ class App extends Component {
 
     healthRoutes: [
       '/',
-      '/health-plan',
-      '/coverage-time',
-      '/income',
-      '/gender',
-      '/month',
-      '/day',
-      '/year',
-      '/preexist',
-      '/household',
-      '/height-weight',
-      '/address',
-      '/name',
-      '/email-phone',
-      '/match',
-      '/thank-you',
+      'health/health-plan',
+      'health/coverage-time',
+      'health/income',
+      'health/gender',
+      'health/month',
+      'health/day',
+      'health/year',
+      'health/preexist',
+      'health/household',
+      'health/height-weight',
+      'health/address',
+      'health/name',
+      'health/email-phone',
+      'health/match',
+      'health/thank-you',
     ],
 
     medicareRoutes: [
       '/',
-      '/enrolled',
-      '/gender',
-      '/month',
-      '/day',
-      '/year',
-      '/address',
-      '/name',
-      '/email-phone',
-      '/thank-you',
+      'medicare/enrolled',
+      'medicare/gender',
+      'medicare/month',
+      'medicare/day',
+      'medicare/year',
+      'medicare/address',
+      'medicare/name',
+      'medicare/email-phone',
+      'medicare/thank-you',
     ],
 
     healthPostData: {
-      lp_campaign_id: '60adbd314c992',
-      lp_campaign_key: 'j3xtKfTcYkw2PFJG9ZLh',
+      // lp_campaign_id: '60adbd314c992',
+      // lp_campaign_key: 'j3xtKfTcYkw2PFJG9ZLh',
       lp_s4: '12',
       lp_s5: '13',
-      landing_page: 'l.com',
       TCPA_Consent: 'Yes',
       TCPA_Language: 'By hitting Get My Free Quote above, I provide my express written consent to the following. Telemarketing calls, text messages, emails, and postal mail from this Web site, our marketing and re-marketing network, and up to eight insurance companies or their affiliates or representatives at the phone number (including wireless number), email address, and postal address provided by me. Telemarketing calls, text messages, emails, and postal mail (including wireless number), email address, and postal address provided by me. Calls and text messages transmitting insurance quotes, or seeking related additional information from me, using an Automated Telephone Dialing System or prerecorded or artificial voices. Electronic video monitoring and recordation of my activities on this Site. I also understand that my agreement to be contacted is not a condition of purchasing any property, goods, or services and that I may call (855) 701-3066 to speak with someone about obtaining an insurance quote. I acknowledge that I may revoke my consent by emailing “STOP” to optout@quotehound.com. I affirm that I have read and agree to this websites Privacy Policy and Terms of Use',
       trusted_form_cert_id: '',
       jornaya_lead_id: '',
       IP_Address: '',
       useragent: navigator.userAgent,
-      zip_code:localStorage.getItem('zip'),
-      city: localStorage.getItem('city'),
-      state: localStorage.getItem('state'),
-      health_insurance_plan: 'Individual Family',
       coverage_time: '',
       household_income: '',
       gender: '',
@@ -105,38 +100,36 @@ class App extends Component {
       phone_home: '',
       email_address: '',
       entrance_url: '',
-      lp_request_id:'',
+      lp_request_id: '',
     },
 
     medicarePostData: {
-      lp_campaign_id: '610208246d0ec',
-			lp_campaign_key: 'Yy4MHdVc3ZKWp6q7RXxg',
-			lp_s3: '12',
-			lp_s4: '13',
-			landing_page: 'l.com',
-			TCPA_Consent: 'Yes',
-			TCPA_Language:'By pressing Get My Free Quote, I am providing my express written consent and e-signature which may be revoked at any time. I consent to receive emails, telephone calls, text messages, artificial or prerecorded messages from Us Medicare Quotes its affiliates, and/or any of our  marketing partners  (or their service provider partners on their behalf) regarding their products and services (including Medicare Advantage plans, Medicare Part D Prescription Drug Plans or Medicare Supplement Insurance Plans) at the email address and telephone number provided, including my wireless phone number (if provided) utilizing an automated telephone dialing system. Telephone companies may impose additional charges on subscribers for messages.  I understand that I am not required to grant this consent as a condition of purchasing any property, goods, or services from the foregoing companies (2) I agree to this websites  Privacy Policy and Terms of Use',
-			trusted_form_cert_id: '',
-			jornaya_lead_id: '',
-			// Redirect_URL: "",
-			IP_Address: '',
-			user_agent: navigator.userAgent,
-			//s1 form fields
-			are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
-			//S2 form fields
-			gender: '',
+
+      lp_s3: '12',
+      lp_s4: '13',
+      TCPA_Consent: 'Yes',
+      TCPA_Language: 'By pressing Get My Free Quote, I am providing my express written consent and e-signature which may be revoked at any time. I consent to receive emails, telephone calls, text messages, artificial or prerecorded messages from Us Medicare Quotes its affiliates, and/or any of our  marketing partners  (or their service provider partners on their behalf) regarding their products and services (including Medicare Advantage plans, Medicare Part D Prescription Drug Plans or Medicare Supplement Insurance Plans) at the email address and telephone number provided, including my wireless phone number (if provided) utilizing an automated telephone dialing system. Telephone companies may impose additional charges on subscribers for messages.  I understand that I am not required to grant this consent as a condition of purchasing any property, goods, or services from the foregoing companies (2) I agree to this websites  Privacy Policy and Terms of Use',
+      trusted_form_cert_id: '',
+      jornaya_lead_id: '',
+      // Redirect_URL: "",
+      IP_Address: '',
+      user_agent: navigator.userAgent,
+      //s1 form fields
+      are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
+      //S2 form fields
+      gender: '',
       month: '',
       day: '',
       year: '',
-			dob: '',
-			address: '',
+      dob: '',
+      address: '',
       zip_code: localStorage.getItem('zip'),
       city: localStorage.getItem('city'),
       state: localStorage.getItem('state'),
-			first_name: '',
-			last_name: '',
-			email_address	: '',
-			phone_home: '',
+      first_name: '',
+      last_name: '',
+      email_address: '',
+      phone_home: '',
       entrance_url: '',
       lp_request_id: document.getElementById('lp').value,
       gclid: document.getElementById('gclid').value
@@ -154,41 +147,52 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-      <NavBar />
+          <NavBar />
           <Switch>
+
+            {/* Landing Page */}
+
             <Route path='/' exact>
               <LandingPage
-              setZipCode={(v) => {
-                this.setState({
-                  medicarePostData: {
-                    ...this.state.healthPostData,
-                    jornaya_lead_id: document.getElementById('leadid_token').value,
-                   // trusted_form_cert_id: document.getElementById('xxTrustedFormToken_0').value,
-                  },
+                setZipCode={(v) => {
+                  this.setState({
+                    medicarePostData: {
+                      ...this.state.medicarePostData,
+                      jornaya_lead_id: document.getElementById('leadid_token').value,
+                      trusted_form_cert_id: document.getElementById('xxTrustedFormToken_0').value,
+                      lp_campaign_id: '610208246d0ec',
+                      lp_campaign_key: 'Yy4MHdVc3ZKWp6q7RXxg',
+                      landing_page: 'pickyourhealthquotes.com',
+                    },
+                    healthPostData: {
+                      ...this.state.healthPostData,
+                      jornaya_lead_id: document.getElementById('leadid_token').value,
+                      trusted_form_cert_id: document.getElementById('xxTrustedFormToken_0').value,
+                      lp_campaign_id: '60adbd314c992',
+                      lp_campaign_key: 'j3xtKfTcYkw2PFJG9ZLh',
+                      landing_page: 'pickyourhealthquotes.com',
+                      health_insurance_plan: 'Individual Family',
+                      zip_code: document.getElementById('zipCode').value,
+      city: document.getElementById('city').value,
+      state: document.getElementById('state').value,
 
-                  healthPostData: {
-                    ...this.state.postData,
-                    jornaya_lead_id: document.getElementById('leadid_token').value,
-                    //trusted_form_cert_id: document.getElementById('xxTrustedFormToken_0').value,
-                  
-                  }
+                    }
+                  });
 
-                });
-
-              }}
+                }}
               />
             </Route>
-            
+
             {/* Switch start */}
             <Route path='/age' exact>
-                <Age />
+              <Age />
             </Route>
 
-            {/* Step 1 of both forms  */}
+
 
             {/* Health step 1 */}
-            <Route path='/health-plan' exact>
-            <HealthPlan
+            <Route path='/health/health-plan' exact>
+              <HealthPlan
                 setPlan={(v) => {
                   this.setState({
                     healthPostData: {
@@ -202,21 +206,22 @@ class App extends Component {
 
             {/* Medicare Step 1 */}
             <Route path='/enrolled' exact>
-            <Enroll
-                      setEnrolled={(v) => {
-                        this.setState({
-                          healthPostData: {
-                            ...this.state.healthPostData,
-                           
+              <Enroll
+                setEnrolled={(v) => {
+                  this.setState({
+                    medicarePostData: {
+                      ...this.state.medicarePostData,
+
                       coverage_time: v,
-                            are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
-                          },
-                        });
-                      }}
-                  />
+                      are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
+                    },
+                  });
+                }}
+              />
             </Route>
 
-            <Route path='/coverage-time' exact>
+            {/* Health Step 2 */}
+            <Route path='/health/coverage-time' exact>
               <HealthCoverageTime
                 setCoverTime={(v) => {
                   this.setState({
@@ -229,7 +234,8 @@ class App extends Component {
               />
             </Route>
 
-            <Route path='/income' exact>
+            {/* Health Step 3 */}
+            <Route path='/health/income' exact>
               <HealthIncome
 
                 setIncome={(v) => {
@@ -242,8 +248,9 @@ class App extends Component {
                 }}
               />
             </Route>
-
-            <Route path='/gender' exact>
+            
+            {/* Health step 4 */}
+            <Route path='/health/gender' exact>
               <HealthGender
                 setGender={(v) => {
                   this.setState({
@@ -256,7 +263,8 @@ class App extends Component {
               />
             </Route>
 
-            <Route path='/month' exact>
+            {/* Health step 5 */}
+            <Route path='/health/month' exact>
               <HealthMonth
                 setMonth={(v) => {
                   this.setState({
@@ -269,7 +277,8 @@ class App extends Component {
               />
             </Route>
 
-            <Route path='/day' exact>
+            {/* Health Step 6 */}
+            <Route path='/health/day' exact>
 
               <HealthDay
                 setDate={(v) => {
@@ -281,10 +290,10 @@ class App extends Component {
                   });
                 }}
               />
-
             </Route>
 
-            <Route path='/year' exact>
+            {/* Health step 7 */}
+            <Route path='/health/year' exact>
 
               <HealthYear
                 setDOB={(v) => {
@@ -298,7 +307,8 @@ class App extends Component {
               />
             </Route>
 
-            <Route path='/preexist' exact >
+            {/* Health step 8 */}
+            <Route path='/health/preexist' exact >
               <HealthPreExist
                 setTabacco={(v) => {
                   this.setState({
@@ -309,11 +319,11 @@ class App extends Component {
                   });
                 }}
               />
-
             </Route>
 
-            <Route path='/household' exact>
-              <HealthHousehold 
+            {/* Health step 9 */}
+            <Route path='/health/household' exact>
+              <HealthHousehold
                 setSpouse={(v) => {
                   this.setState({
                     healthPostData: {
@@ -323,10 +333,10 @@ class App extends Component {
                   });
                 }}
               />
-
             </Route>
 
-            <Route path='/height-weight' exact>
+            {/* Health Step 10 */}
+            <Route path='/health/height-weight' exact>
 
               <HealthHeightWeight
                 setWeight={(v) => {
@@ -355,11 +365,12 @@ class App extends Component {
                     },
                   });
                 }}
-                
+
               />
             </Route>
 
-            <Route path='/address' exact>
+            {/* Health Step 11 */}
+            <Route path='/health/address' exact>
               <HealthAddress
 
                 setAddress={(v) => {
@@ -373,7 +384,8 @@ class App extends Component {
               />
             </Route>
 
-            <Route path="/name" exact>
+            {/* Health step 12 */}
+            <Route path="/health/name" exact>
               <HealthName
                 setFName={(v) => {
                   this.setState({
@@ -397,53 +409,54 @@ class App extends Component {
               />
             </Route>
 
-            <Route path='/email-phone' exact>
+            {/* Health Step 13 */}
+            <Route path='/health/email-phone' exact>
               <HealthEmailPhone
-                 email_address={this.state.healthPostData.email_address}
-                 phone_home={this.state.healthPostData.phone_home}
- 
-                 setEmail={(v) => {
-                   this.setState({
-                     healthPostData: {
-                       ...this.state.healthPostData,
-                       email_address: v,
-                     },
-                   });
-                 }}
- 
-                 setPhone={(v) => {
-                   this.setState({
-                     healthPostData: {
- 
-                       ...this.state.healthPostData,
-                       phone_home: v,
-                     },
-                   });
-                 }}
- 
-                 setURL={(v) => {
-                   this.setState({
-                     healthPostData: {
-                       ...this.state.healthPostData,
-                       entrance_url: v,
-                     }
-                   })
-                 }}
- 
- 
-                 postData={this.state.healthPostData}
+                email_address={this.state.healthPostData.email_address}
+                phone_home={this.state.healthPostData.phone_home}
+
+                setEmail={(v) => {
+                  this.setState({
+                    healthPostData: {
+                      ...this.state.healthPostData,
+                      email_address: v,
+                    },
+                  });
+                }}
+
+                setPhone={(v) => {
+                  this.setState({
+                    healthPostData: {
+
+                      ...this.state.healthPostData,
+                      phone_home: v,
+                    },
+                  });
+                }}
+
+                setURL={(v) => {
+                  this.setState({
+                    healthPostData: {
+                      ...this.state.healthPostData,
+                      entrance_url: v,
+                    }
+                  })
+                }}
+
+
+                healthPostData={this.state.healthPostData}
               />
             </Route>
 
-           
-            
-            <Route path='/thank-you' exact>
+
+
+            {/* Health Thank You */}
+            <Route path='/health/thank-you' exact>
               <HealthThankYou
-
                 postData2={this.state.healthPostData}
-    
               />
             </Route>
+
           </Switch>
         </div>
       </BrowserRouter>

@@ -6,7 +6,6 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
 import './forms.css';
-import HeaderTitle from './HeaderTitle';
 
 
 
@@ -40,7 +39,7 @@ class Age extends Component {
 
     const lp = urlParams.get('lp_request_id')
 
-    this.props.history.push('/health-plan' + '?lp_request_id=' + lp + '&zip_code=' +  zip);
+    this.props.history.push('/health/coverage-time' + '?lp_request_id=' + lp + '&zip_code=' +  zip);
 
   }
 
@@ -49,7 +48,6 @@ class Age extends Component {
     return (
 
       <div className="back bg-white">
-        <HeaderTitle />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
       <div className="px-4 py-8 sm:px-10">
 

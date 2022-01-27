@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import './forms.css';
-import Footer from '../Footer.jsx'
+import Footer from '../Footer.jsx';
+import HealthHeader from './HealthHeader'
+
 
 class Month extends Component {
 
@@ -26,7 +28,7 @@ class Month extends Component {
         const gender = urlParams.get('gender');
 
 
-        this.props.history.push('/day' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&health_insurance_plan=ACA_Plan' + '&coverage_time=' + time + '&household_income=' + income + '&gender=' + gender + '&month=' + m);
+        this.props.history.push('/health/day' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&health_insurance_plan=ACA_Plan' + '&coverage_time=' + time + '&household_income=' + income + '&gender=' + gender + '&month=' + m);
     }
 
 
@@ -37,9 +39,7 @@ class Month extends Component {
 
         return (
             <div className="back bg-white">
-                <div className="bg-blue-500 headerText justify-center align-middle text-center">
-                    <h2>Get Your Free Health Insurance Quote</h2>
-                </div>
+                <HealthHeader />
                 <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
                     <div className="px-4 py-8 sm:px-10">
 
