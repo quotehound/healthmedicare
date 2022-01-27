@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-import Logo from './Assets/qhlogo.png';
+import Logo from './Assets/pyhq.png';
 
 class NavBar extends Component {
     render() {
@@ -18,7 +18,6 @@ class NavBar extends Component {
     <a className="text-center inline-block px-2 py-2 text-sm text-white font-bold leading-loose bg-blue-400 hover:bg-blue-600 rounded transition duration-200" href="tel:8885671448" data-config-id="04_button">(888) 567-1448</a> 
   </li>  
 
-  <li className="inline-block px-2 py-2 text-sm text-gray-500 font-bold leading-loose"> 9AM - 6PM ET Monday - Friday </li>
 
 </ul>
 

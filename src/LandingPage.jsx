@@ -282,7 +282,7 @@ class LandingPage extends Component {
         <a className="inline-block mb-6 text-gray-900 text-lg font-semibold" href="/" data-config-id="brand">
           <img className="h-7" src={Logo} alt="" width="auto" />
         </a>
-        <p className="hidden lg:block text-sm text-gray-500" data-config-id="copy">All rights reserved © USA Trucking Quotes 2021</p>
+        <p className="hidden lg:block text-sm text-gray-500" data-config-id="copy">All rights reserved © Pick Your Health Quotes</p>
       </div>
       <div className="w-full lg:w-4/6 px-4">
         <div className="flex flex-wrap items-center justify-end">
@@ -298,9 +298,7 @@ class LandingPage extends Component {
     </div>
   </div>
 
-  <div className="container mx-auto px-4 lg:w-1/2 md:w-full text-center">
-          <p className="text-sm text-center text-gray-500"> This is a commercial site designed for the solicitation of insurance from selected Commerical insurance carriers. It is not an insurer, an insurance agency. Insurance agency services may be provided by a partner licensed agency. This site is not maintained by or affiliated with the federal government’s Commerical Insurance Marketplace website or any state government Commercial insurance marketplace</p>
-          </div>
+  
 </section>
             </div>
         )
