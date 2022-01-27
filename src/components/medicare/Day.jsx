@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router';
 
 import './forms.css';
-// import Footer from '../Footer.jsx'
+import MedicareHeader from './MedicareHeader';
 
 class Day extends Component {
 
@@ -25,7 +25,7 @@ class Day extends Component {
     const gender = urlParams.get('gender');
     const month = urlParams.get('month');
 
-        this.props.history.push('/year' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + d);
+        this.props.history.push('/medicare/year' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + d);
       
     }
 
@@ -56,9 +56,7 @@ class Day extends Component {
         
         return(
             <div className="back bg-white">
-                <div className="bg-blue-500 headerText justify-center align-middle text-center">
-                <h2>Get A No Obligation Medicare Insurance Quote</h2>
-                </div>
+               <MedicareHeader />
                 <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
                     <div className="px-4 py-8 sm:px-10">
 

@@ -5,6 +5,8 @@ import './forms.css';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import MedicareHeader from './MedicareHeader';
+
 
 // import Footer from '../Footer';
 
@@ -54,7 +56,7 @@ class Year extends Component {
             this.props.setDOB(year + '-' + month + '-' + day)
 
 
-            this.props.history.push('/address' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year);
+            this.props.history.push('/medicare/address' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year);
         }
 
     }
@@ -86,9 +88,7 @@ class Year extends Component {
         return (
             <div>
                 <div className="back bg-white">
-                    <div className="bg-blue-500 headerText justify-center align-middle text-center">
-                    <h2>Get A No Obligation Medicare Insurance Quote</h2>
-                    </div>
+                    <MedicareHeader />
                     <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
                         <div className="px-4 py-8 sm:px-10">
 

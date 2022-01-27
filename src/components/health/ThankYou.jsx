@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import HealthConnectMe from './HealthConnectMe';
-import MA from './HealthMA'
+import HealthMA from './HealthMA'
 import HealthHeader from './HealthHeader'
 
 import './forms.css';
@@ -42,7 +42,7 @@ class ThankYou extends Component {
           </div>
 
 
-          <MA />
+          <HealthMA />
 
           </div>. 
 

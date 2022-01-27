@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {withRouter} from 'react-router';
 
 import './forms.css';
+import MedicareHeader from './MedicareHeader';
+
 
 
 class Enrolled extends Component {
@@ -21,7 +23,7 @@ class Enrolled extends Component {
         const zip = urlParams.get('zip_code');
         const lp = urlParams.get('lp_request_id')
 
-        this.props.history.push('/gender' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + v)
+        this.props.history.push('/medicare/gender' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + v)
 
         
     }
@@ -30,9 +32,7 @@ class Enrolled extends Component {
     render() {
         return (
             <div className="back bg-white"> 
-       <div className="bg-blue-500 headerText justify-center align-middle text-center">
-       <h2>Get A No Obligation Medicare Insurance Quote</h2>
-                </div>
+       <MedicareHeader />
       <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
       <div className="px-4 py-8 sm:px-10">
 

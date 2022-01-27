@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import MedicareHeader from './MedicareHeader';
 
 // import Footer from '../Footer';
 import './forms.css';
@@ -68,7 +69,7 @@ const year = urlParams.get('year');
 const address = urlParams.get('address')
 
      
-    this.props.history.push('/email-phone' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName);
+    this.props.history.push('/medicare/email-phone' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName);
 
     }
 
@@ -114,9 +115,7 @@ const address = urlParams.get('address')
         return (
             <div>
                 <div className="back bg-white">
-                    <div className="bg-blue-500 headerText justify-center align-middle text-center">
-                    <h2>Get A No Obligation Medicare Insurance Quote</h2>
-                    </div>
+                   <MedicareHeader />
                     <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
                         <div className="px-4 py-8 sm:px-10">
 

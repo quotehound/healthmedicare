@@ -233,6 +233,22 @@ class App extends Component {
                 }}
               />
             </Route>
+            
+            {/* Medicare step 2*/}
+            <Route path='/medicare/gender' exact> 
+                  <Gender 
+
+                    setGender={(v) => {
+                      this.setState({
+                        medicarePostData: {
+                          ...this.state.medicarePostData,
+                          gender: v,
+                        },
+                      });
+                    }}
+                  
+                  />
+              </Route>
 
             {/* Health Step 3 */}
             <Route path='/health/income' exact>
@@ -248,6 +264,20 @@ class App extends Component {
                 }}
               />
             </Route>
+
+            {/* Medixare Step 3 */}
+            <Route path='/medicare/month' exact>
+                    <Month
+                      setMonth={(v) => {
+                        this.setState({
+                          medicarePostData: {
+                            ...this.state.medicarePostData, 
+                            month: v,
+                          }
+                        })
+                      }}
+                    />
+                </Route> 
             
             {/* Health step 4 */}
             <Route path='/health/gender' exact>
@@ -262,6 +292,25 @@ class App extends Component {
                 }}
               />
             </Route>
+            
+            {/* Medicare Step 4 */}
+            <Route path='/medicare/day' exact> 
+                      <Day 
+
+                      setDate={(v) => {
+                        this.setState({
+                          medicarePostData: {
+                            ...this.state.medicarePostData,
+
+                            day: v,
+                          },
+                        });
+                      }}
+
+                      />
+                
+            </Route>
+          
 
             {/* Health step 5 */}
             <Route path='/health/month' exact>
@@ -276,6 +325,22 @@ class App extends Component {
                 }}
               />
             </Route>
+
+            {/* Medicare Step 5 */}
+            <Route path='/medicare/year' exact> 
+                <Year 
+
+                setDOB={(v) => {  
+                  this.setState({
+                    medicarePostData: {
+                    ...this.state.medicarePostData,
+                    dob: v,
+                    },
+                  });
+                }}
+
+                />
+                </Route>
 
             {/* Health Step 6 */}
             <Route path='/health/day' exact>
@@ -292,6 +357,23 @@ class App extends Component {
               />
             </Route>
 
+            {/* Medicare step 6 */}
+            <Route path='/medicare/address' exact>
+                  <Address 
+                    setAddress = {(v) => {
+                      this.setState({
+
+                        medicarePostData: {
+                          ...this.state.medicarePostData, 
+                          address: v,
+                        },                    
+                      });
+                    }}
+                  />
+
+                </Route>
+
+
             {/* Health step 7 */}
             <Route path='/health/year' exact>
 
@@ -307,6 +389,32 @@ class App extends Component {
               />
             </Route>
 
+            {/* Medicare Step 7 */}
+            <Route path='/medicare/name' exact> 
+                <Name
+                setFName={(v) => {
+                  this.setState({
+                    medicarePostData: {
+                      ...this.state.medicarePostData,
+                      first_name: v,
+                    },
+                  });
+
+
+                }}
+
+                setLName={(v) => {
+                  this.setState({
+                    medicarePostData: {
+                      ...this.state.medicarePostData,
+                      last_name: v,
+                    },
+                  });
+                }}
+              />
+                
+                </Route>
+
             {/* Health step 8 */}
             <Route path='/health/preexist' exact >
               <HealthPreExist
@@ -318,6 +426,45 @@ class App extends Component {
                     },
                   });
                 }}
+              />
+            </Route>
+
+            {/* Medicare Step 8 */}
+            <Route path='/medicare/email-phone' exact>
+              <EmailPhone
+                 email_address={this.state.medicarePostData.email_address}
+                 phone_home={this.state.medicarePostData.phone_home}
+ 
+                 setEmail={(v) => {
+                   this.setState({
+                    medicarePostData: {
+                       ...this.state.medicarePostData,
+                       email_address: v,
+                     },
+                   });
+                 }}
+ 
+                 setPhone={(v) => {
+                   this.setState({
+                    medicarePostData: {
+ 
+                       ...this.state.medicarePostData,
+                       phone_home: v,
+                     },
+                   });
+                 }}
+ 
+                 setURL={(v) => {
+                   this.setState({
+                    medicarePostData: {
+                       ...this.state.medicarePostData,
+                       entrance_url: v,
+                     }
+                   })
+                 }}
+ 
+ 
+                 medicarePostData={this.state.medicarePostData}
               />
             </Route>
 
@@ -334,6 +481,16 @@ class App extends Component {
                 }}
               />
             </Route>
+
+            {/* Mediccare Thank you page */}
+            <Route path='/medicare/thank-you' exact>
+              <ThankYou
+
+                postData2={this.state.medicarePostData}
+    
+              />
+            </Route>
+
 
             {/* Health Step 10 */}
             <Route path='/health/height-weight' exact>

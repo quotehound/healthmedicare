@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class HealthMA extends Component {
+class MedicareMA extends Component {
 
 
 
@@ -8,7 +8,7 @@ class HealthMA extends Component {
 
         const renderScript = document.createElement("script");
 
-         renderScript.innerHTML = "window.MediaAlphaExchange = {'data': { 'zip': localStorage.getItem('zip')}, 'placement_id': 'O_lLlIDgDp7Wt1W0Z2IzmjkLjux5FA','sub_1': 'test sub id', 'type': 'ad_unit', 'version': 17}; window.MediaAlphaExchange__load('mediaalpha_placeholder'); ";
+         renderScript.innerHTML = "window.MediaAlphaExchange = {'data': { 'zip': localStorage.getItem('zip')}, 'placement_id': 'vLKzTdoPTUxy-P7jysaC7AwW18kMVA','sub_1': 'test sub id', 'type': 'ad_unit', 'version': 17}; window.MediaAlphaExchange__load('mediaalpha_placeholder'); ";
 
          document.body.appendChild(renderScript);
 
@@ -33,4 +33,4 @@ class HealthMA extends Component {
     }
 }
 
-export default HealthMA;
+export default MedicareMA;
