@@ -26,7 +26,10 @@ class Age extends Component {
 
     const lp = urlParams.get('lp_request_id')
 
-    window.location.href = 'https://www.usmedicarequotes.com/enrolled' + '?lp_request_id=' + lp + '&zip_code=' +  zip;
+    const city = document.getElementById('city').value;
+    const state = document.getElementById('state').value;
+
+    window.location.href = 'https://www.usmedicarequotes.com/enrolled' + '?lp_request_id=' + lp + '&zip_code=' +  zip + '&city=' + city + '&state=' + state;
 
 
   }
@@ -41,7 +44,10 @@ class Age extends Component {
 
     const lp = urlParams.get('lp_request_id')
 
-    window.location.href = 'https://www.usahealthquotes.com/coverage-time' + '?lp_request_id=' + lp + '&zip_code=' +  zip;
+    const city = document.getElementById('city').value;
+    const state = document.getElementById('state').value;
+
+    window.location.href = 'https://www.usahealthquotes.com/coverage-time' + '?lp_request_id=' + lp + '&zip_code=' +  zip + '&city=' + city + '&state=' + state;
 
   }
 
