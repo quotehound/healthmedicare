@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import NavBar from './Navbar';
 
 import './forms.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,7 +26,7 @@ class Age extends Component {
 
     const lp = urlParams.get('lp_request_id')
 
-    this.props.history.push('/enrolled' + '?lp_request_id=' + lp + '&zip_code=' +  zip);
+    window.location.href = 'https://www.usmedicarequotes.com/enrolled' + '?lp_request_id=' + lp + '&zip_code=' +  zip;
 
 
   }
@@ -40,7 +41,7 @@ class Age extends Component {
 
     const lp = urlParams.get('lp_request_id')
 
-    this.props.history.push('/health/coverage-time' + '?lp_request_id=' + lp + '&zip_code=' +  zip);
+    window.location.href = 'https://www.usahealthquotes.com/coverage-time' + '?lp_request_id=' + lp + '&zip_code=' +  zip;
 
   }
 
